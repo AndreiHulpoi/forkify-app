@@ -1,6 +1,5 @@
 import { async } from 'regenerator-runtime';
 import { API_URL, RES_PER_PAGE, KEY } from './config.js';
-// import { getJSON, sendJSON } from './helpers.js';
 import { AJAX } from './helpers.js';
 
 export const state = {
@@ -38,7 +37,6 @@ export const loadRecipe = async function (id) {
       state.recipe.bookmarked = true;
     else state.recipe.bookmarked = false;
   } catch (err) {
-    //error happening in the getJSON function (helpers) if not throw, then throw to get access in controller
     throw err;
   }
 };
